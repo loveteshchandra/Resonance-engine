@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resonance-engine
+  labels:
+    app: resonance-engine
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: resonance-engine
+  template:
+    metadata:
+      labels:
+        app: resonance-engine
+    spec:
+      containers:
+      - name: resonance-engine
+        image: resonance-engine:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+        env:
+        - name: TARGET_ENV
+          value: "production"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: resonance-engine-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: resonance-engine
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8000
