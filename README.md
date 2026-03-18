@@ -59,32 +59,6 @@ resonance-engine/
 
 4.  Open your browser to `http://127.0.0.1:8000/docs` to test the API.
 
-## Usage
-
-Send a POST request to `/transcreate`:
-
-```json
-{
-  "text": "It's raining cats and dogs",
-  "target_language": "French",
-  "context": "Casual conversation"
-}
-```
-
-Response:
-
-```json
-{
-  "original": "It's raining cats and dogs",
-  "transcreated": "Il pleut des cordes",
-  "meta": {
-    "intent": "Emphasize heavy rain",
-    "cultural_adaptation": "Idiom replacement",
-    "tone": "Casual"
-  }
-}
-```
-
 ## License
 
 MIT
