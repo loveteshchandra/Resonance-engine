@@ -2,10 +2,6 @@
 
 **ResonanceEngine** is a generative AI backend designed for high-fidelity "Transcreation," prioritizing semantic impact over literal translation. It ensures that creative content—from marketing copy to poetry—retains its original "soul" and resonance across different languages.
 
-## Vision
-
-Startups and enterprises often struggle to scale their brand voice globally because standard translation tools (like Google Translate or even raw GPT-4) focus on *lexical fidelity* (word-for-word accuracy). **ResonanceEngine** focuses on *impact fidelity* (emotional and stylistic accuracy).
-
 ## Architecture
 
 The engine employs a three-stage pipeline:
